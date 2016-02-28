@@ -1,0 +1,20 @@
+*{margin: 0;padding: 0}
+
+body{
+	font-size: 14px;
+	color: #000;
+}
+ul, ol{
+	list-style: none;
+}
+input{outline: none;
+}
+img{
+	border:none;
+}
+.page{
+	margin:0 auto;
+	width: 960px;
+	height: 100%;
+	border:1px solid #ccc;
+}
