@@ -160,7 +160,7 @@ img{
 	padding-bottom: 10px;
 	background-color: #fff;
 	border:1px solid #ddd;
-	z-index: 100;
+	z-index: 99;
 }
 
 .fore{
@@ -269,14 +269,13 @@ dd a:last-child{
 	overflow: hidden;
 	border:1px solid #a2a2a2;
 }
-/*.bigPic ul{
-	position: relative;
-	width: 9999px;
-}*/
-.bigPic li{
+.bigPic ul{
 	position: absolute;
-	top: 0;
-	left: 0;
+	width: 9999px;
+	height: 310px;
+}
+.bigPic li{
+	float: left;
 }
 .zoom{
 	width: 100px;
@@ -293,12 +292,15 @@ dd a:last-child{
 	border-radius: 10px;
 }
 .smallPic{
+	position: relative;
 	width: 300px;
 	height: 85px;
 	margin-top: 10px;
+	overflow: hidden;
 }
 .smallPic ul{
-	width: 100%;
+	position: absolute;
+	width: 999px;
 	height: 100%;
 
 }
@@ -313,11 +315,6 @@ dd a:last-child{
 	border:1px solid #a2a2a2;
 }
 
-.overlay{
-	display: none;
-	background-color: alpha(100,100,100,0.5);
-	z-index: 999;
-}
 
 .tab_btn{
 	height: 20px;
@@ -397,6 +394,7 @@ strong{
 .color_choice{
 	height: 65px;
 }
+
 .color_choice li{
 	float: left;
 	width: 26px;
@@ -404,6 +402,12 @@ strong{
 	margin-right: 15px;
 	padding: 1px;
 	border: 1px solid #a2a2a2;
+}
+.color_choice li:hover{
+	border-color: #f90;
+}
+.border_color{
+	border-color: #f90;
 }
 .size_choice{
 	height: 60px;
@@ -418,19 +422,91 @@ strong{
 	background-color: #fff;
 	border: 1px solid #a2a2a2;
 }
+.size_choice li:hover{
+	border-color: #f90;
+}
+.bg_size{
+	background-color: #f90 !important;
+}
 .num_choice, .total{
 	min-height: 25px;
 }
 .evaluation{
 	font-size: 13px;
-	line-height: 15px;
+	line-height: 15px
 }
-.evaluation span{
-	display: block;
+.evaluation ul{
+	position: relative;
 	width: 80px;
 	height: 16px;
-	background: url("../images/star-matrix.gif") 0 0;
+	overflow: hidden;
+	background-image: url("../images/star-matrix.gif");
 }
+.evaluation li{
+	float: left;
+}
+.evaluation li a{
+	position: absolute;
+	display: block;
+	width: 16px;
+	height: 16px;
+	z-index: 99;
+}
+.one a{
+	left: 0;
+}
+.two a{
+	left: 16px;
+}
+.three a{
+	left: 32px;
+}
+.four a{
+	left: 48px;
+}
+.five a{
+	left: 64px;
+}
+.nostar{
+	background-position: 0 0;
+}
+.star1{
+	background-position: 0 -16px;
+ }
+ 
+.star2{
+	background-position: 0 -32px;
+ }
+ .star3{
+	background-position: 0 -48px;
+ }
+ .star4{
+	background-position: 0 -64px;
+ }
+ .star5{
+	background-position: 0 -80px;
+ }
+.evaluation a:hover{
+	width: 80px;
+	left: 0;
+	z-index: 2;
+	background: url("../images/star-matrix.gif");
+}
+.one a:hover{
+	background-position: 0 -96px ;
+ }
+ .two a:hover{
+	background-position: 0 -112px ;
+ }
+.three a:hover{
+	background-position: 0 -128px ;
+ }
+.four a:hover{
+	background-position: 0 -144px ;
+}
+.five a:hover{
+	background-position: 0 -160px ;
+ }
 .buy{
 	width: 94px;
 	height: 29px;
@@ -449,4 +525,67 @@ strong{
 	line-height: 20px;
 	color: #666;
 	text-align: center;
+}
+
+.overlay{
+	display: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background-color: rgba(0,0,0,0.2);
+}
+.box_dialog{
+	display: none;
+	z-index: 1000;
+	position: absolute;
+	width: 500px;
+	height: 180px;
+	top: calc(50% - 100px);
+	left: calc(50% - 260px);
+	background-color: #fff;
+	border: 10px solid rgba(10,10,10,0.3);
+}
+.box_title{
+	position: relative;
+	width: calc(100% - 10px);
+	height: 30px;
+	padding-left: 10px;
+	background: url("../images/common.jpg") repeat;
+}
+.box_title h3{
+	font-size: 13px;
+	line-height: 30px;
+	color: rgba(0,0,0,0.6);
+}
+.box_main{
+	position: relative;
+	width: 430px;
+	height: 100px;
+	/*border: 2px solid red;*/
+}
+.box_main .icon{
+	position: absolute;
+	display: block;
+	top: 20px;
+	left: 20px;
+	width: 32px;
+	height: 32px;
+	background: url("../images/box.png") -66px 0;
+}
+.main_content{
+	position: relative;
+	top: 30px;
+	left: 60px;
+	padding-left: 10px;
+	/*padding-right: 10px;*/
+}
+.main_content h3{
+	font-size: 16px;
+}
+.main_content p{
+	font-size: 14px;
+	line-height: 18px;
+	color: rgba(0,0,0,0.9);
 }
