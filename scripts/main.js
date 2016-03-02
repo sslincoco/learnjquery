@@ -31,8 +31,12 @@
 		$(".smallPic li").each(function(index){
 			this.index =index;
 		});
+		$(".bigPic li").each(function(index){
+			this.index =index;
+		});
 		$(".smallPic li").on("click",function(){
 			var index = this.index;
+			$(".bigPic li").eq(index).addClass("active").siblings().removeClass("active");
 			$(".bigPic ul").css("left",-index*310+'px');
 
 		});
@@ -57,6 +61,8 @@
 			$(this).css("border-color","#f90") .siblings().css("border-color","#a2a2a2");
 			$(".bigPic ul").css("left",-index*3*310+'px');
 			$(".smallPic ul").css("left",-index*297+'px');
+			$(".bigPic li").eq(3*index).addClass("active").siblings().removeClass("active");
+			$(".smallPic li").eq(3*index).addClass("active").siblings().removeClass("active");
 			var color = $(this).find("img").attr("alt");
 			$(".jnColor").html(color);
 
@@ -73,7 +79,7 @@
 		//当商品数量变化时，下面的金额也随之变化
 		$(".jnNum").change(function(){
 			var num = parseInt($(this).find("option:selected").val());
-			$(".pay").html(num*200+'元');
+			$(".pay").html(num*200);
 		});
 
 		//评价商品
@@ -83,11 +89,6 @@
 		$(".evaluation a").on("click",function(){
 			var index =this.index;
 			console.log("您的评价是："+(index+1)+"分");
-			alert("您的评价是："+(index+1)+"分");
-			// $(this).css("background-position","0 -96px");
-			// $(this).addClass("2star");
-
-
 			$(this).parent().parent().removeClass() .addClass("star"+(index+1));
 		});
 
@@ -103,6 +104,13 @@
 			$(".overlay").show();
 			$(".box_dialog").show();
 			$(".main_content p").html(text);
+		});
+
+		//关闭提示购物车信息
+		$(".close").click(function(){
+			$(".main_content p").html("");
+			$(".overlay").hide();
+			$(".box_dialog").hide();
 		});
 
 	});

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/skin0.css">
 	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script type="text/javascript" src="scripts/myjqzoom.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
 	<script type="text/javascript" src="scripts/nav.js"></script>
 </head>
@@ -220,48 +221,48 @@
 			<h2>商品分类</h2>
 			<h3>推荐品牌</h3>
 			<ul>
-				<li>耐克</li>
+				<li><a href="#">耐克</a></li>
 				<li><a class="hot" href="#">阿迪达斯<img src="images/hot.gif" /></a></li>
-				<li>达芙妮</li>
-				<li>李宁</li>
-				<li>安踏</li>
-				<li>奥康</li>
+				<li><a href="#">达芙妮</a></li>
+				<li><a href="#">李宁</a></li>
+				<li><a href="#">安踏</a></li>
+				<li><a href="#">奥康</a></li>
 				<li><a class="hot" href="#">骆驼<img src="images/hot.gif" /></a></li>
-				<li>特步</li>
+				<li><a href="#">特步</a></li>
 			</ul>
 			<h3>女装</h3>
 			<ul>
-				<li>呢大衣</li>
-				<li>T恤</li>
-				<li>羽绒</li>
-				<li>衬衫</li>
-				<li>羊绒衫</li>
-				<li>针织</li>
-				<li>连衣裙</li>
-				<li>皮外套</li>
+				<li><a href="#">呢大衣</a></li>
+				<li><a href="#">T恤</a></li>
+				<li><a href="#">羽绒</a></li>
+				<li><a href="#">衬衫</a></li>
+				<li><a href="#">羊绒衫</a></li>
+				<li><a href="#">针织</a></li>
+				<li><a href="#">连衣裙</a></li>
+				<li><a href="#">皮外套</a></li>
 			</ul>
 			<h3>男装</h3>
 			<ul>
-				<li>衬衫</li>
-				<li>T恤衫</li>
-				<li>夹克</li>
-				<li>大皮衣</li>
-				<li>风衣</li>
-				<li>牛仔裤</li>
-				<li>西服</li>
-				<li>卫衣</li>
+				<li><a href="#">衬衫</a></li>
+				<li><a href="#">T恤衫</a></li>
+				<li><a href="#">夹克</a></li>
+				<li><a href="#">大皮衣</a></li>
+				<li><a href="#">风衣</a></li>
+				<li><a href="#">牛仔裤</a></li>
+				<li><a href="#">西服</a></li>
+				<li><a href="#">卫衣</a></li>
 			</ul>
 			<h3>鞋包服饰</h3>
 
 			<ul>
-				<li>围巾</li>
-				<li>旅行箱</li>
-				<li>真皮包</li>
-				<li>韩版</li>
-				<li>达芙妮</li>
-				<li>单肩包</li>
-				<li>毛线</li>
-				<li>清仓靴子</li>
+				<li><a href="#">围巾</a></li>
+				<li><a href="#">旅行箱</a></li>
+				<li><a href="#">真皮包</a></li>
+				<li><a href="#">韩版</a></li>
+				<li><a href="#">达芙妮</a></li>
+				<li><a href="#">单肩包</a></li>
+				<li><a href="#">毛线</a></li>
+				<li><a href="#">清仓靴子</a></li>
 			</ul>
 		</div><!-- 左侧部分===商品分类结束 -->
 
@@ -269,7 +270,7 @@
 		<div class="jnShow">
 			<div class="bigPic">
 				<ul>
-					<li class="big"><img src="images/pro_img/blue_one_small.jpg"></li>
+					<li class="big active"><img src="images/pro_img/blue_one_small.jpg"></li>
 					<li class="big"><img src="images/pro_img/blue_two_small.jpg"></li>
 					<li class="big"><img src="images/pro_img/blue_three_small.jpg"></li>
 
@@ -281,11 +282,15 @@
 					<li class="big"><img src="images/pro_img/green_two_small.jpg"></li>
 					<li class="big"><img src="images/pro_img/green_two_small.jpg"></li>
 				</ul>
+				<div class="zoomOut"></div>
 			</div>
+			<!-- 局部放大的图片效果 -->
+			<div class="zoomIn"></div>
+
 			<div class="zoom"><input class="btn" type="button"></input></div>
 			<div class="smallPic">
 				<ul>
-					<li class="small"><img src="images/pro_img/blue_one.jpg"></li>
+					<li class="small active"><img src="images/pro_img/blue_one.jpg"></li>
 					<li class="small"><img src="images/pro_img/blue_two.jpg"></li>
 					<li class="small"><img src="images/pro_img/blue_three.jpg"></li>
 
@@ -319,9 +324,9 @@
 			 <label>促&nbsp; 销：</label><strong>200.00</strong> 元<br />
 			 <div class="choose">
 				 <ul>
-				 	<li class="color_choice">颜&nbsp; 色：<span class="jnColor">蓝白</span>
+				 	<li class="color_choice">颜&nbsp; 色：<span class="jnColor">未选择</span>
 					 	<ul>
-						 	<li><img src="images/pro_img/blue.jpg" alt="蓝白" /></li>
+						 	<li class="active"><img src="images/pro_img/blue.jpg" alt="蓝白" /></li>
 						 	<li><img src="images/pro_img/yellow.jpg" alt="黄白" /></li>
 						 	<li><img src="images/pro_img/green.jpg" alt="粉绿" /></li>
 						 </ul>
@@ -343,7 +348,7 @@
 					 		<option>5</option>
 					 	</select>
 				 	</li>
-				 	<li class="total">总&nbsp; 计：<span class="pay">200 元</span></li>
+				 	<li class="total">总&nbsp; 计：<span class="pay">200 </span>元</li>
 				 </ul>
 			 </div><!-- 产品参数选择结束 -->
 			 <!-- 给商品评分 -->
@@ -384,6 +389,7 @@
 				<p></p>
 			</div>
 		</div>
+		<div class="close_btn"><button class="close">关闭</button></div>
 	</div>
 	 
 </body>
